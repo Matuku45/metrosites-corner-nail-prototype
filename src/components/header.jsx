@@ -1,15 +1,16 @@
 // src/components/Header.jsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-const HeaderForApp = ({ setActivePage }) => {
+const HeaderForApp = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", key: "home" },
-    { name: "Services", key: "services" },
-    { name: "Gallery", key: "gallery" },
-    { name: "Booking", key: "booking" },
-    { name: "About", key: "about" },
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Booking", path: "/booking" },
+    { name: "About", path: "/about" },
   ];
 
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
@@ -17,34 +18,32 @@ const HeaderForApp = ({ setActivePage }) => {
   return (
     <header className="w-full bg-gray-100 shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-20">
-        {/* Logo */}
-        <a href="#" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold text-pink-500"></span>
+        <Link to="/" className="flex items-center space-x-2">
           <span className="text-xl font-semibold text-gray-800">
             ✨ Nails & Gift Corner ✨
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 items-center">
           {navItems.map((item) => (
-            <button
-              key={item.key}
-              onClick={() => setActivePage(item.key)}
+            <Link
+              key={item.name}
+              to={item.path}
               className="text-gray-700 hover:text-pink-500 font-medium transition-colors"
             >
               {item.name}
-            </button>
+            </Link>
           ))}
-          <button
-            onClick={() => setActivePage("booking")}
+          <Link
+            to="/booking"
             className="ml-4 px-4 py-2 bg-pink-500 text-white rounded-md shadow hover:bg-pink-600 transition-colors font-medium"
           >
             Book Now
-          </button>
+          </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Nav */}
         <button
           className="md:hidden btn btn-ghost"
           onClick={toggleMobileMenu}
@@ -76,33 +75,28 @@ const HeaderForApp = ({ setActivePage }) => {
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {isMobileMenuOpen && (
         <nav className="md:hidden bg-gray-100 shadow-md">
           <ul className="flex flex-col space-y-4 px-6 py-4">
             {navItems.map((item) => (
-              <li key={item.key}>
-                <button
-                  onClick={() => {
-                    setActivePage(item.key);
-                    setMobileMenuOpen(false);
-                  }}
+              <li key={item.name}>
+                <Link
+                  to={item.path}
+                  onClick={() => setMobileMenuOpen(false)}
                   className="block text-gray-700 hover:text-pink-500 font-medium"
                 >
                   {item.name}
-                </button>
+                </Link>
               </li>
             ))}
             <li>
-              <button
-                onClick={() => {
-                  setActivePage("booking");
-                  setMobileMenuOpen(false);
-                }}
+              <Link
+                to="/booking"
+                onClick={() => setMobileMenuOpen(false)}
                 className="block w-full text-center px-4 py-2 bg-pink-500 text-white rounded-md shadow hover:bg-pink-600 font-medium"
               >
                 Book Now
-              </button>
+              </Link>
             </li>
           </ul>
         </nav>
