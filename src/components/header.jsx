@@ -1,9 +1,10 @@
 // src/components/Header.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Use Link for SPA navigation
+import { Link, useLocation } from "react-router-dom";
 
 const HeaderForApp = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation(); // For active link styling
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -20,9 +21,9 @@ const HeaderForApp = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold text-pink-500"></span>
+          <span className="text-2xl font-bold text-pink-500">💅</span>
           <span className="text-xl font-semibold text-gray-800">
-            ✨ Nails & Gift Corner ✨
+            Nails & Gift Corner
           </span>
         </Link>
 
@@ -32,14 +33,18 @@ const HeaderForApp = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="text-gray-700 hover:text-pink-500 font-medium transition-colors"
+              className={`font-medium transition-colors ${
+                location.pathname === item.path
+                  ? "text-pink-500 underline underline-offset-4"
+                  : "text-gray-700 hover:text-pink-500"
+              }`}
             >
               {item.name}
             </Link>
           ))}
           <Link
             to="/booking"
-            className="ml-4 px-4 py-2 bg-pink-500 text-white rounded-md shadow hover:bg-pink-600 transition-colors font-medium"
+            className="ml-4 px-4 py-2 bg-pink-500 text-white rounded-md shadow hover:bg-pink-600 transition-all font-medium"
           >
             Book Now
           </Link>
@@ -86,7 +91,11 @@ const HeaderForApp = () => {
                 <Link
                   to={item.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-gray-700 hover:text-pink-500 font-medium"
+                  className={`block font-medium ${
+                    location.pathname === item.path
+                      ? "text-pink-500 underline underline-offset-4"
+                      : "text-gray-700 hover:text-pink-500"
+                  }`}
                 >
                   {item.name}
                 </Link>
