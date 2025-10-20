@@ -1,18 +1,24 @@
+// src/App.jsx
 import { useState } from 'react';
 import Home from './pages/Home.jsx';
-import './App.css'; // Import Tailwind CSS styles
 import HeaderForApp from './components/header.jsx';
 import Footer from './components/footer.jsx';
+import './App.css'; // Tailwind CSS styles
+
 function App() {
   return (
-    <>
-   <HeaderForApp />
-      <div className="max-w-2xl mx-auto p-6 text-center">
-   
-      </div>
+    <div className="min-h-screen flex flex-col">
+      {/* Header */}
+      <HeaderForApp />
 
+      {/* Main Content */}
+      <main className="flex-grow">
+        <Home />
+      </main>
+
+      {/* Footer */}
       <Footer />
-    </>
+    </div>
   );
 }
 
