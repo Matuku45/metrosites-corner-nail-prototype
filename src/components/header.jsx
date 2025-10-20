@@ -1,6 +1,6 @@
 // src/components/Header.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // Use Link for SPA navigation
 
 const HeaderForApp = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,7 +18,9 @@ const HeaderForApp = () => {
   return (
     <header className="w-full bg-gray-100 shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-20">
+        {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
+          <span className="text-2xl font-bold text-pink-500"></span>
           <span className="text-xl font-semibold text-gray-800">
             ✨ Nails & Gift Corner ✨
           </span>
@@ -43,7 +45,7 @@ const HeaderForApp = () => {
           </Link>
         </nav>
 
-        {/* Mobile Nav */}
+        {/* Mobile Menu Button */}
         <button
           className="md:hidden btn btn-ghost"
           onClick={toggleMobileMenu}
@@ -75,6 +77,7 @@ const HeaderForApp = () => {
         </button>
       </div>
 
+      {/* Mobile Nav */}
       {isMobileMenuOpen && (
         <nav className="md:hidden bg-gray-100 shadow-md">
           <ul className="flex flex-col space-y-4 px-6 py-4">
