@@ -15,14 +15,13 @@ const HeaderForApp = () => {
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <header className="w-full bg-base-100 shadow-md fixed top-0 left-0 z-50">
+    <header className="w-full bg-gray-100 shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-20">
         {/* Logo */}
         <a href="#" className="flex items-center space-x-2">
           <span className="text-2xl font-bold text-pink-500"></span>
           <span className="text-xl font-semibold text-gray-800">
-         
-✨ Nails & Gift Corner ✨
+            ✨ Nails & Gift Corner ✨
           </span>
         </a>
 
@@ -79,7 +78,7 @@ const HeaderForApp = () => {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden bg-base-100 shadow-md">
+        <nav className="md:hidden bg-gray-100 shadow-md">
           <ul className="flex flex-col space-y-4 px-6 py-4">
             {navItems.map((item) => (
               <li key={item.name}>
