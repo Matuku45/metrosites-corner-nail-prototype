@@ -19,9 +19,10 @@ const HeaderForApp = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-20">
         {/* Logo */}
         <a href="#" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold text-pink-500">💅</span>
+          <span className="text-2xl font-bold text-pink-500"></span>
           <span className="text-xl font-semibold text-gray-800">
-            La Sorellas
+         
+✨ Nails & Gift Corner ✨
           </span>
         </a>
 
