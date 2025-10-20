@@ -4,7 +4,8 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import HeaderForApp from "./components/header";
 import Footer from "./components/footer.jsx";
-
+import Services from "./pages/Services.jsx";
+import Booking from "./pages/Booking.jsx";
 function App() {
   return (
     <Router>
@@ -14,6 +15,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/booking" element={<Booking />} />
+     
             {/* Add other routes like Booking, Services, Gallery */}
           </Routes>
         </main>
