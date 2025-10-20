@@ -1,15 +1,15 @@
 // src/components/Header.jsx
 import React, { useState } from "react";
 
-const HeaderForApp = () => {
+const HeaderForApp = ({ setActivePage }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#" },
-    { name: "Services", href: "#services" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Booking", href: "#booking" },
-    { name: "About", href: "#about" },
+    { name: "Home", key: "home" },
+    { name: "Services", key: "services" },
+    { name: "Gallery", key: "gallery" },
+    { name: "Booking", key: "booking" },
+    { name: "About", key: "about" },
   ];
 
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
@@ -28,20 +28,20 @@ const HeaderForApp = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 items-center">
           {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
+            <button
+              key={item.key}
+              onClick={() => setActivePage(item.key)}
               className="text-gray-700 hover:text-pink-500 font-medium transition-colors"
             >
               {item.name}
-            </a>
+            </button>
           ))}
-          <a
-            href="#booking"
+          <button
+            onClick={() => setActivePage("booking")}
             className="ml-4 px-4 py-2 bg-pink-500 text-white rounded-md shadow hover:bg-pink-600 transition-colors font-medium"
           >
             Book Now
-          </a>
+          </button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -81,24 +81,28 @@ const HeaderForApp = () => {
         <nav className="md:hidden bg-gray-100 shadow-md">
           <ul className="flex flex-col space-y-4 px-6 py-4">
             {navItems.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
+              <li key={item.key}>
+                <button
+                  onClick={() => {
+                    setActivePage(item.key);
+                    setMobileMenuOpen(false);
+                  }}
                   className="block text-gray-700 hover:text-pink-500 font-medium"
                 >
                   {item.name}
-                </a>
+                </button>
               </li>
             ))}
             <li>
-              <a
-                href="#booking"
-                onClick={() => setMobileMenuOpen(false)}
+              <button
+                onClick={() => {
+                  setActivePage("booking");
+                  setMobileMenuOpen(false);
+                }}
                 className="block w-full text-center px-4 py-2 bg-pink-500 text-white rounded-md shadow hover:bg-pink-600 font-medium"
               >
                 Book Now
-              </a>
+              </button>
             </li>
           </ul>
         </nav>

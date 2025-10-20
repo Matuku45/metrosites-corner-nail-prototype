@@ -3,33 +3,42 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-pink-400 to-purple-600 text-white py-16 px-6 text-center">
+      <section className="bg-gradient-to-r from-pink-400 to-purple-600 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-pulse">
-          Welcome to Nails & Gift Corner
+          Nails & Gift Corner
         </h1>
         <p className="text-lg md:text-2xl mb-6">
-          The ultimate salon & gift shop management system.
+          Manage your salon, bookings, payments, and retail sales all in one place.
         </p>
-        <button className="btn btn-primary btn-lg animate-bounce">
-          Start Now
-        </button>
+        <div className="flex justify-center gap-4 flex-wrap">
+          <button className="btn btn-primary btn-lg animate-bounce">
+            Get Started
+          </button>
+          <a
+            href="#contact"
+            className="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-pink-500 transition-colors"
+          >
+            Contact Sales
+          </a>
+        </div>
       </section>
 
       {/* Features Section */}
       <section className="py-12 px-6 md:px-20">
-        <h2 className="text-3xl font-bold text-center mb-10">Our Features</h2>
+        <h2 className="text-3xl font-bold text-center mb-10">Maximize Your Salon Hours</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Feature Card */}
           <div className="card bg-white shadow-lg p-6 hover:scale-105 transition-transform duration-300">
             <img
               src="/src/assets/salon1.png"
-              alt="Scheduling"
+              alt="Smooth Calendar Management"
               className="rounded-lg mb-4"
             />
-            <h3 className="font-bold text-xl mb-2">In-Salon Scheduling</h3>
-            <p>Manage client appointments effortlessly with automated reminders.</p>
+            <h3 className="font-bold text-xl mb-2">Smooth Calendar Management</h3>
+            <p>
+              Drag and drop appointments, color-code bookings, assign techs, and automate confirmations.
+            </p>
           </div>
 
           <div className="card bg-white shadow-lg p-6 hover:scale-105 transition-transform duration-300">
@@ -38,8 +47,10 @@ export default function Home() {
               alt="Online Booking"
               className="rounded-lg mb-4"
             />
-            <h3 className="font-bold text-xl mb-2">Online Booking</h3>
-            <p>Let clients book themselves online, boosting productivity and efficiency.</p>
+            <h3 className="font-bold text-xl mb-2">Online Booking & Payments</h3>
+            <p>
+              Clients can book online anytime. Accept payments via card, Apple Pay, Google Pay, or Cash App.
+            </p>
           </div>
 
           <div className="card bg-white shadow-lg p-6 hover:scale-105 transition-transform duration-300">
@@ -49,46 +60,36 @@ export default function Home() {
               className="rounded-lg mb-4"
             />
             <h3 className="font-bold text-xl mb-2">Mobile Access</h3>
-            <p>Access your salon & gift data anytime, anywhere from any device.</p>
+            <p>
+              Access salon data, manage staff schedules, and check payments from anywhere on any device.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Quick Access / News Section */}
+      {/* Client Management Section */}
       <section className="py-12 px-6 md:px-20 bg-gray-100">
-        <h2 className="text-3xl font-bold text-center mb-10">Quick Access</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="relative overflow-hidden rounded-lg shadow-lg">
-            <img
-              src="/mnt/data/db3c4453-3e3c-4bd8-926a-721ceb802f13.png"
-              alt="Product Roadmap"
-              className="w-full h-60 object-cover"
-            />
-            <div className="absolute bottom-0 bg-black bg-opacity-50 text-white p-4 w-full">
-              Product Roadmap
-            </div>
+        <h2 className="text-3xl font-bold text-center mb-10">Keep Every Booth Busy</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="card bg-white shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <h3 className="font-bold text-xl mb-2">Automated Messaging</h3>
+            <p>
+              Spend less time managing bookings. Automated confirmations and rescheduling handled by AI-powered messaging.
+            </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-lg shadow-lg">
-            <img
-              src="/src/assets/news_events.png"
-              alt="News & Events"
-              className="w-full h-60 object-cover"
-            />
-            <div className="absolute bottom-0 bg-black bg-opacity-50 text-white p-4 w-full">
-              News & Events
-            </div>
+          <div className="card bg-white shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <h3 className="font-bold text-xl mb-2">Client Loyalty & Campaigns</h3>
+            <p>
+              Send email/text campaigns, gift cards, and loyalty rewards to boost repeat business.
+            </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-lg shadow-lg">
-            <img
-              src="/src/assets/employee_directory.png"
-              alt="Employee Directory"
-              className="w-full h-60 object-cover"
-            />
-            <div className="absolute bottom-0 bg-black bg-opacity-50 text-white p-4 w-full">
-              Employee Directory
-            </div>
+          <div className="card bg-white shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <h3 className="font-bold text-xl mb-2">Discoverability & Online Presence</h3>
+            <p>
+              Add Book Now buttons to Instagram/Facebook and let clients book anytime, anywhere.
+            </p>
           </div>
         </div>
       </section>
@@ -99,7 +100,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="card bg-white shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
             <p className="mb-4">
-              “This system made my salon management so easy! Scheduling, inventory, and online booking all in one place.”
+              “Nails & Gift Corner simplified my salon management. Scheduling, payments, and marketing all in one platform.”
             </p>
             <h4 className="font-bold">Sarah Stephenson</h4>
             <span>Salon Owner</span>
@@ -107,7 +108,7 @@ export default function Home() {
 
           <div className="card bg-white shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
             <p className="mb-4">
-              “Nails & Gift Corner really helps me stay organized and efficient. I love the mobile access feature!”
+              “The mobile access and automated reminders save me hours every week. Highly recommended!”
             </p>
             <h4 className="font-bold">Mouna Sapper</h4>
             <span>Salon Manager</span>
@@ -115,11 +116,28 @@ export default function Home() {
 
           <div className="card bg-white shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
             <p className="mb-4">
-              “Integrated payment processing and client reminders are a game-changer for my salon business.”
+              “Integrated online booking and client communication keeps my salon running smoothly.”
             </p>
             <h4 className="font-bold">Laura Boton</h4>
             <span>Salon Owner</span>
           </div>
+        </div>
+      </section>
+
+      {/* CTA / Pricing Section */}
+      <section className="py-12 px-6 md:px-20 bg-gradient-to-r from-pink-400 to-purple-600 text-white text-center">
+        <h2 className="text-3xl font-bold mb-6">One Plan to Run Your Entire Salon</h2>
+        <p className="mb-8">
+          Manage bookings, payments, retail sales, and staff with a single easy-to-use platform.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          <button className="btn btn-primary btn-lg">Start Free Trial</button>
+          <a
+            href="#contact"
+            className="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-pink-500 transition-colors"
+          >
+            Contact Sales
+          </a>
         </div>
       </section>
     </div>
