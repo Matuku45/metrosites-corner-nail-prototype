@@ -44,9 +44,9 @@ export default function Booking() {
       <section className="py-12 px-6 md:px-20 flex justify-center">
         <form
           onSubmit={handleSubmit}
-          className="bg-white shadow-lg rounded-xl p-8 md:w-1/2 space-y-6"
+          className="bg-white shadow-2xl rounded-2xl p-8 md:w-1/2 space-y-6 animate-fadeIn"
         >
-          <h2 className="text-2xl font-bold text-center mb-6">
+          <h2 className="text-3xl font-bold text-center mb-6 text-pink-500">
             Reserve Your Spot
           </h2>
 
@@ -58,7 +58,7 @@ export default function Booking() {
             onChange={handleChange}
             placeholder="Full Name"
             required
-            className="input input-bordered w-full"
+            className="input input-bordered w-full focus:ring-2 focus:ring-pink-400 transition"
           />
 
           {/* Email */}
@@ -69,7 +69,7 @@ export default function Booking() {
             onChange={handleChange}
             placeholder="Email Address"
             required
-            className="input input-bordered w-full"
+            className="input input-bordered w-full focus:ring-2 focus:ring-pink-400 transition"
           />
 
           {/* Phone */}
@@ -80,7 +80,7 @@ export default function Booking() {
             onChange={handleChange}
             placeholder="Phone Number"
             required
-            className="input input-bordered w-full"
+            className="input input-bordered w-full focus:ring-2 focus:ring-pink-400 transition"
           />
 
           {/* Service */}
@@ -89,7 +89,7 @@ export default function Booking() {
             value={formData.service}
             onChange={handleChange}
             required
-            className="select select-bordered w-full"
+            className="select select-bordered w-full focus:ring-2 focus:ring-pink-400 transition"
           >
             <option value="">Select Service</option>
             <option value="Manicure">Manicure</option>
@@ -106,7 +106,7 @@ export default function Booking() {
               value={formData.date}
               onChange={handleChange}
               required
-              className="input input-bordered w-full"
+              className="input input-bordered w-full focus:ring-2 focus:ring-pink-400 transition"
             />
             <input
               type="time"
@@ -114,14 +114,14 @@ export default function Booking() {
               value={formData.time}
               onChange={handleChange}
               required
-              className="input input-bordered w-full"
+              className="input input-bordered w-full focus:ring-2 focus:ring-pink-400 transition"
             />
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="btn btn-primary w-full text-lg font-bold hover:scale-105 transform transition duration-300"
+            className="btn btn-primary w-full text-lg font-bold hover:scale-105 transform transition duration-300 shadow-lg"
           >
             Book Now
           </button>
@@ -129,10 +129,8 @@ export default function Booking() {
       </section>
 
       {/* Info / CTA Section */}
-      <section className="py-12 px-6 md:px-20 text-center bg-gradient-to-r from-purple-400 to-pink-500 text-white rounded-xl mx-6 md:mx-20 my-12 shadow-lg">
-        <h2 className="text-3xl font-bold mb-4">
-          Need Assistance?
-        </h2>
+      <section className="py-12 px-6 md:px-20 text-center bg-gradient-to-r from-purple-400 to-pink-500 text-white rounded-2xl mx-6 md:mx-20 my-12 shadow-xl animate-fadeIn">
+        <h2 className="text-3xl font-bold mb-4">Need Assistance?</h2>
         <p className="mb-6">
           Contact us if you have any questions or special requests for your appointment.
         </p>
