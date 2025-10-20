@@ -1,16 +1,15 @@
 // src/components/Header.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
-const Header = () => {
+const HeaderForApp = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Booking", href: "/booking" },
-    { name: "About", href: "/about" },
+    { name: "Home", href: "#" },
+    { name: "Services", href: "#services" },
+    { name: "Gallery", href: "#gallery" },
+    { name: "Booking", href: "#booking" },
+    { name: "About", href: "#about" },
   ];
 
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
@@ -19,30 +18,30 @@ const Header = () => {
     <header className="w-full bg-base-100 shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-20">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2">
+        <a href="#" className="flex items-center space-x-2">
           <span className="text-2xl font-bold text-pink-500">💅</span>
           <span className="text-xl font-semibold text-gray-800">
             La Sorellas
           </span>
-        </Link>
+        </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 items-center">
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.name}
-              to={item.href}
+              href={item.href}
               className="text-gray-700 hover:text-pink-500 font-medium transition-colors"
             >
               {item.name}
-            </Link>
+            </a>
           ))}
-          <Link
-            to="/booking"
+          <a
+            href="#booking"
             className="ml-4 px-4 py-2 bg-pink-500 text-white rounded-md shadow hover:bg-pink-600 transition-colors font-medium"
           >
             Book Now
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -83,23 +82,23 @@ const Header = () => {
           <ul className="flex flex-col space-y-4 px-6 py-4">
             {navItems.map((item) => (
               <li key={item.name}>
-                <Link
-                  to={item.href}
+                <a
+                  href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="block text-gray-700 hover:text-pink-500 font-medium"
                 >
                   {item.name}
-                </Link>
+                </a>
               </li>
             ))}
             <li>
-              <Link
-                to="/booking"
+              <a
+                href="#booking"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block w-full text-center px-4 py-2 bg-pink-500 text-white rounded-md shadow hover:bg-pink-600 font-medium"
               >
                 Book Now
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>
@@ -108,4 +107,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderForApp;
