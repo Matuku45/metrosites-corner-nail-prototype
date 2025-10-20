@@ -1,14 +1,7 @@
-import { useState } from 'react'
-import Home from './pages/Home.jsx'
-
-function App() {
-
-
+export default function App() {
   return (
-    <>
-      <Home />
-    </>
-  )
+    <div className="bg-blue-200 p-10 text-center">
+      <h1 className="text-4xl font-bold text-red-600">Hello Tailwind!</h1>
+    </div>
+  );
 }
-
-export default App
