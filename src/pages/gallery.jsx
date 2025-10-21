@@ -2,16 +2,17 @@ import React, { useState } from "react";
 
 // Updated gallery data with correct image paths
 const galleryData = [
-  { id: 1, title: "Saloon 1", description: "Elegant manicure setup.", src: "/src/assets/ims/gallery/saloon1.avif" },
-  { id: 2, title: "Saloon 2", description: "Relaxing pedicure area.", src: "/src/assets/ims/gallery/saloon2.avif" },
-  { id: 3, title: "Saloon 3", description: "Creative nail art corner.", src: "/src/assets/ims/gallery/saloon3.avif" },
-  { id: 4, title: "Saloon 4", description: "Modern salon interior.", src: "/src/assets/ims/gallery/saloon4.webp" },
-  { id: 5, title: "Saloon 5", description: "Luxury manicure stations.", src: "/src/assets/ims/gallery/saloon5.avif" },
-  { id: 6, title: "Saloon 6", description: "Premium salon setup.", src: "/src/assets/ims/gallery/saloon6.jpg" },
-  { id: 7, title: "Saloon 7", description: "Relaxing spa ambiance.", src: "/src/assets/ims/gallery/saloon7.jpg" },
-  { id: 8, title: "Saloon 8", description: "Kids-friendly nail area.", src: "/src/assets/ims/gallery/saloon8.avif" },
-  { id: 9, title: "Saloon 9", description: "Gift sets and accessories.", src: "/src/assets/ims/gallery/saloon9.jpg" },
+  { id: 1, title: "Manicure Station", description: "Elegant manicure setup with vibrant colors.", src: "/src/assets/ims/gallery/saloon1.avif" },
+  { id: 2, title: "Pedicure Area", description: "Relaxing pedicure chairs with spa ambiance.", src: "/src/assets/ims/gallery/saloon2.avif" },
+  { id: 3, title: "Nail Art Corner", description: "Creative nail art designs and tools.", src: "/src/assets/ims/gallery/saloon3.avif" },
+  { id: 4, title: "Modern Interior", description: "Stylish and contemporary salon interior.", src: "/src/assets/ims/gallery/saloon4.webp" },
+  { id: 5, title: "Luxury Manicure Stations", description: "High-end manicure setup for premium services.", src: "/src/assets/ims/gallery/saloon5.avif" },
+  { id: 6, title: "Premium Salon Setup", description: "Fully equipped salon for professional services.", src: "/src/assets/ims/gallery/saloon6.jpg" },
+  { id: 7, title: "Spa & Relaxation", description: "Cozy spa area for ultimate relaxation.", src: "/src/assets/ims/gallery/saloon7.jpg" },
+  { id: 8, title: "Kids Nail Area", description: "Fun and safe nail corner for children.", src: "/src/assets/ims/gallery/saloon8.avif" },
+  { id: 9, title: "Gift Corner", description: "Curated gift sets and beauty accessories.", src: "/src/assets/ims/gallery/saloon9.jpg" },
 ];
+
 
 export default function Gallery() {
   const [selected, setSelected] = useState(null);
