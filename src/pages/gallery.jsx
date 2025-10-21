@@ -1,16 +1,16 @@
-// src/pages/Gallery.jsx
 import React, { useState } from "react";
 
+// Updated gallery data with correct image paths
 const galleryData = [
-  { id: 1, title: "Elegant Manicure", description: "Classic manicure with vibrant colors.", src: "/images/manicure1.jpg" },
-  { id: 2, title: "Pedicure Perfection", description: "Relaxing pedicure with floral designs.", src: "/images/pedicure1.jpg" },
-  { id: 3, title: "Creative Nail Art", description: "Unique nail art designs for any occasion.", src: "/images/nailart1.jpg" },
-  { id: 4, title: "Gift Wrapping Ideas", description: "Beautifully wrapped gifts for clients.", src: "/images/gift1.jpg" },
-  { id: 5, title: "Spa Experience", description: "Rejuvenating spa session for ultimate relaxation.", src: "/images/spa1.jpg" },
-  { id: 6, title: "Luxury Salon Setup", description: "Modern salon interior for premium services.", src: "/images/salon1.jpg" },
-  { id: 7, title: "Holiday Special Nails", description: "Festive nail designs to celebrate the season.", src: "/images/holiday1.jpg" },
-  { id: 8, title: "Kids Nail Fun", description: "Safe and fun nail designs for children.", src: "/images/kids1.jpg" },
-  { id: 9, title: "Premium Gift Sets", description: "Curated gift boxes for special occasions.", src: "/images/gift2.jpg" },
+  { id: 1, title: "Saloon 1", description: "Elegant manicure setup.", src: "/src/assets/ims/gallery/saloon1.avif" },
+  { id: 2, title: "Saloon 2", description: "Relaxing pedicure area.", src: "/src/assets/ims/gallery/saloon2.avif" },
+  { id: 3, title: "Saloon 3", description: "Creative nail art corner.", src: "/src/assets/ims/gallery/saloon3.avif" },
+  { id: 4, title: "Saloon 4", description: "Modern salon interior.", src: "/src/assets/ims/gallery/saloon4.webp" },
+  { id: 5, title: "Saloon 5", description: "Luxury manicure stations.", src: "/src/assets/ims/gallery/saloon5.avif" },
+  { id: 6, title: "Saloon 6", description: "Premium salon setup.", src: "/src/assets/ims/gallery/saloon6.jpg" },
+  { id: 7, title: "Saloon 7", description: "Relaxing spa ambiance.", src: "/src/assets/ims/gallery/saloon7.jpg" },
+  { id: 8, title: "Saloon 8", description: "Kids-friendly nail area.", src: "/src/assets/ims/gallery/saloon8.avif" },
+  { id: 9, title: "Saloon 9", description: "Gift sets and accessories.", src: "/src/assets/ims/gallery/saloon9.jpg" },
 ];
 
 export default function Gallery() {
@@ -18,13 +18,13 @@ export default function Gallery() {
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="bg-gradient-to-r from-pink-400 to-purple-600 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-pulse">
           Our Gallery
         </h1>
         <p className="text-lg md:text-2xl">
-          Explore our nail art, services, and gift shop inspirations.
+          Explore our nail art, services, and salon inspirations.
         </p>
       </section>
 
