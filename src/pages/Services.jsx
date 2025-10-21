@@ -12,7 +12,7 @@ export default function Services() {
     {
       icon: <FaLeaf className="text-green-500 text-4xl mb-4 mx-auto" />,
       title: "Spa & Beauty Treatments",
-      desc: "Relaxing facials, massages, and nail treatments to pamper clients and enhance wellness.",
+      desc: "ail treatments to pamper clients and enhance wellness.",
     },
     {
       icon: <FaGift className="text-yellow-500 text-4xl mb-4 mx-auto" />,
