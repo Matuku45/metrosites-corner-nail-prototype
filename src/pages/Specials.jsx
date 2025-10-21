@@ -3,6 +3,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Star, Gift, Sparkles, Heart } from "lucide-react";
 
+// Import static images
+import manicure1 from "../assets/special/laura-chouette-k7V8rspanlo-unsplash.jpg";
+import pedicure1 from "../assets/special/th (1).jpg";
+import nailart1 from "../assets/special/th (2).jpg";
+import gift1 from "../assets/special/th.jpg";
+
 export default function Specials() {
   const specialsData = [
     {
@@ -10,34 +16,33 @@ export default function Specials() {
       title: "Luxury Manicure",
       description: "Pamper your nails with our deluxe manicure treatment.",
       icon: Star,
-      img: "/src/assets/specials/manicure1.avif",
+      img: manicure1,
     },
     {
       id: 2,
       title: "Relaxing Pedicure",
       description: "Enjoy a spa pedicure to refresh and rejuvenate your feet.",
       icon: Heart,
-      img: "/src/assets/specials/pedicure1.avif",
+      img: pedicure1,
     },
     {
       id: 3,
       title: "Nail Art Designs",
       description: "Custom nail art for every occasion and mood.",
       icon: Sparkles,
-      img: "/src/assets/specials/nailart1.avif",
+      img: nailart1,
     },
     {
       id: 4,
       title: "Gift Packages",
       description: "Special gift sets for your loved ones or clients.",
       icon: Gift,
-      img: "/src/assets/specials/gift1.avif",
+      img: gift1,
     },
   ];
 
   return (
     <div className="bg-gray-50 min-h-screen pt-20">
-      
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-400 to-pink-500 text-white py-20 px-6 text-center">
         <motion.h1
@@ -66,7 +71,10 @@ export default function Specials() {
             <motion.div
               key={item.id}
               whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 flex flex-col items-center text-center p-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-xl shadow-lg overflow-hidden flex flex-col items-center text-center p-6"
             >
               <item.icon className="w-12 h-12 text-pink-500 mb-4 animate-bounce" />
               <img

@@ -12,6 +12,7 @@ const HeaderForApp = () => {
     { name: "Gallery", path: "/gallery" },
     { name: "Booking", path: "/booking" },
     { name: "About", path: "/about" },
+    { name: "Special", path: "/specials" },
   ];
 
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
