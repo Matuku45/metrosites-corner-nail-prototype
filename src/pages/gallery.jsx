@@ -1,18 +1,28 @@
 import React, { useState } from "react";
 
-// Updated gallery data with correct image paths
-const galleryData = [
-  { id: 1, title: "Manicure Station", description: "Elegant manicure setup with vibrant colors.", src: "/src/assets/ims/gallery/saloon1.avif" },
-  { id: 2, title: "Pedicure Area", description: "Relaxing pedicure chairs with spa ambiance.", src: "/src/assets/ims/gallery/saloon2.avif" },
-  { id: 3, title: "Nail Art Corner", description: "Creative nail art designs and tools.", src: "/src/assets/ims/gallery/saloon3.avif" },
-  { id: 4, title: "Modern Interior", description: "Stylish and contemporary salon interior.", src: "/src/assets/ims/gallery/saloon4.webp" },
-  { id: 5, title: "Luxury Manicure Stations", description: "High-end manicure setup for premium services.", src: "/src/assets/ims/gallery/saloon5.avif" },
-  { id: 6, title: "Premium Salon Setup", description: "Fully equipped salon for professional services.", src: "/src/assets/ims/gallery/saloon6.jpg" },
-  { id: 7, title: "Spa & Relaxation", description: "Cozy spa area for ultimate relaxation.", src: "/src/assets/ims/gallery/saloon7.jpg" },
-  { id: 8, title: "Kids Nail Area", description: "Fun and safe nail corner for children.", src: "/src/assets/ims/gallery/saloon8.avif" },
-  { id: 9, title: "Gift Corner", description: "Curated gift sets and beauty accessories.", src: "/src/assets/ims/gallery/saloon9.jpg" },
-];
+// Import images as modules
+import saloon1 from "../assets/ims/gallery/saloon1.avif";
+import saloon2 from "../assets/ims/gallery/saloon2.avif";
+import saloon3 from "../assets/ims/gallery/saloon3.avif";
+import saloon4 from "../assets/ims/gallery/saloon4.webp";
+import saloon5 from "../assets/ims/gallery/saloon5.avif";
+import saloon6 from "../assets/ims/gallery/saloon6.jpg";
+import saloon7 from "../assets/ims/gallery/saloon7.jpg";
+import saloon8 from "../assets/ims/gallery/saloon8.avif";
+import saloon9 from "../assets/ims/gallery/saloon9.jpg";
 
+// Gallery data using imported images
+const galleryData = [
+  { id: 1, title: "Manicure Station", description: "Elegant manicure setup with vibrant colors.", src: saloon1 },
+  { id: 2, title: "Pedicure Area", description: "Relaxing pedicure chairs with spa ambiance.", src: saloon2 },
+  { id: 3, title: "Nail Art Corner", description: "Creative nail art designs and tools.", src: saloon3 },
+  { id: 4, title: "Modern Interior", description: "Stylish and contemporary salon interior.", src: saloon4 },
+  { id: 5, title: "Luxury Manicure Stations", description: "High-end manicure setup for premium services.", src: saloon5 },
+  { id: 6, title: "Premium Salon Setup", description: "Fully equipped salon for professional services.", src: saloon6 },
+  { id: 7, title: "Spa & Relaxation", description: "Cozy spa area for ultimate relaxation.", src: saloon7 },
+  { id: 8, title: "Kids Nail Area", description: "Fun and safe nail corner for children.", src: saloon8 },
+  { id: 9, title: "Gift Corner", description: "Curated gift sets and beauty accessories.", src: saloon9 },
+];
 
 export default function Gallery() {
   const [selected, setSelected] = useState(null);
@@ -61,7 +71,7 @@ export default function Gallery() {
                 onClick={() => setSelected(null)}
                 className="btn btn-primary hover:scale-105 transform transition duration-300"
               >
-                Close up 
+                Close
               </button>
             </div>
           </div>
@@ -78,7 +88,7 @@ export default function Gallery() {
           href="/booking"
           className="btn btn-primary btn-lg hover:scale-105 transform transition duration-300"
         >
-          Book Now
+          Book now
         </a>
       </section>
     </div>
