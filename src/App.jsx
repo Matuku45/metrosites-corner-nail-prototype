@@ -6,7 +6,7 @@ import HeaderForApp from "./components/header";
 import Footer from "./components/footer.jsx";
 import Services from "./pages/Services.jsx";
 import Booking from "./pages/Booking.jsx";
-import Gallery from "./pages/Gallery.jsx";
+import Gallery from "./pages/Gallery.jsx ";
 import Specials from "./pages/Specials.jsx";
 function App() {
   return (
