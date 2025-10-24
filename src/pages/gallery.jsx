@@ -61,7 +61,7 @@ export default function Gallery() {
                 onClick={() => setSelected(null)}
                 className="btn btn-primary hover:scale-105 transform transition duration-300"
               >
-                Close
+                Close up
               </button>
             </div>
           </div>
